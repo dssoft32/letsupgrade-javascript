@@ -1,47 +1,41 @@
 <!DOCTYPE html>
 <html>
+
 <body>
-<script src="https://momentjs.com/downloads/moment.js"></script>
-<h2>Lets upgrade Day 2: Assignment 1</h2>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <h2>Lets upgrade Day 2: Assignment 1</h2>
 
-<p>Today is: <span id="today"></span></p>
-<p>Current time is :<span id="time"></span></p>
+    <p>Today is: <span id="today"></span></p>
+    <p>Current time is :<span id="time"></span></p>
 
-<h2>Lets upgrade Day 2: Assignment 2</h2>
+    <h2>Lets upgrade Day 2: Assignment 2</h2>
 
-<button onclick="print()" id="content">Print</button>
+    <button onclick="window.print()" id="content">Print</button>
 
-<h2>Lets upgrade Day 2: Assignment 3</h2>
+    <h2>Lets upgrade Day 2: Assignment 3</h2>
 
-<p>Date Formats: <span id="mm-dd-yyyy"></span></p>
-<p><span id="mm/dd/yyyy"></span></p>
-<p><span id="dd-mm-yyyy"></span></p>
-<p><span id="dd/mm/yyyy"></span></p>
+    <p>Date Formats: <span id="mm-dd-yyyy"></span></p>
+    <p><span id="mm/dd/yyyy"></span></p>
+    <p><span id="dd-mm-yyyy"></span></p>
+    <p><span id="dd/mm/yyyy"></span></p>
 
-<script>
-var d = new Date();
+    <script>
+        var d = new Date();
 
+        document.getElementById("today").innerHTML = moment().format("dddd");
+        document.getElementById("time").innerHTML = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
 
-document.getElementById("today").innerHTML = d.toLocaLetsring('en-us', {weekday:'long'})
-;
-document.getElementById("time").innerHTML = d.getHours() +":"+d.getMinutes()+":"+d.getSeconds();
-
-document.getElementById("mm-dd-yyyy").innerHTML = moment().format("MM-DD-yyyy");
+        document.getElementById("mm-dd-yyyy").innerHTML = moment().format("MM-DD-yyyy");
 
 
-document.getElementById("mm/dd/yyyy").innerHTML = moment().format("MM/DD/yyyy");
+        document.getElementById("mm/dd/yyyy").innerHTML = moment().format("MM/DD/yyyy");
 
-document.getElementById("dd-mm-yyyy").innerHTML = moment().format("DD-MM-YYYY");
-document.getElementById("dd/mm/yyyy").innerHTML = moment().format("DD/MM/YYYY");
-
-print(){
-window.print()
-
-}
-
-</script>
+        document.getElementById("dd-mm-yyyy").innerHTML = moment().format("DD-MM-YYYY");
+        document.getElementById("dd/mm/yyyy").innerHTML = moment().format("DD/MM/YYYY");
+    </script>
 
 
 
 </body>
+
 </html>
